@@ -49,7 +49,7 @@ jobs:
 
     - name: Update inference.yaml with s3 model path
       run: |
-        MODEL_URI="s3://churn-model-demo-viraj/models/churn_model${{ github.sha }}.pkl"
+        MODEL_URI="s3://churn-model-demo-viraj/models/churn_model-${{ github.sha }}.pkl"
         sed -i "s|storageUri: .*|storageUri: $MODEL_URI|g" k8s/inference.yaml
 
     - name: Commit updated inference.yaml

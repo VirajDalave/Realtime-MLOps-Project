@@ -5,3 +5,5 @@ __pycache__/
 .dvc/cache
 .dvc/tmp
 serviceaccount.yaml
+.venv/
+*/.gitignore

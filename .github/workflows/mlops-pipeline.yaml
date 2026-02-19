@@ -45,7 +45,7 @@ jobs:
 	- name: Push model to S3
 	  run: |
 		aws s3 cp models/churn_model.pkl s3://churn-model-demo-viraj/models/churn_model-${{ github.sha }}.pkl
-		echo "Model pushed to s3 successfully"
+		echo "Model pushed to s3 successfully!"
 	
 	- name: Update inference.yaml with s3 model path
 	  run: |
